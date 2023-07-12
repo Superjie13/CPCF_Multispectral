@@ -1,6 +1,7 @@
 ## Channel-Patch Cross Feature Fusion for Multispectral Object Detection.
 
-> ## The code will be released after the paper is accepted.
+>## <center> The code will be released after the paper is accepted.
+
 -----------------------------------------------------------------------------------------------------------------
 
 ### Description:
@@ -24,6 +25,18 @@ Data from different modalities, such as infrared and visible light images, can o
 > Multimodal detection results on DroneVehicle dataset
 <div align="center">
 <img src="resources/multimodal_DroneVehicle.gif" width=90% alt="multimodal_DroneVehicle_results"/>
+</div>
+
+> Comparison of information entropy distributions of top and bottom 16 channels of RGB and Thermal feature maps at different levels. † denotes MLP-based cross-attention.
+
+<div align='center'>
+<img src="resources/entropy_dist.png" width=90% alt="entropy_distribution"/>
+</div>
+
+> Visualization of top k and bottom k channel features.The left side shows the RGB data stream at different stages, while the right side shows the counterpart of the thermal data stream. † denotes MLP-based cross-attention.
+
+<div align='center'>
+<img src="resources/vis_channel_feat.png" width=90% alt="entropy_distribution"/>
 </div>
 
 -----------------------------------------------------------------------------------------------------------------
