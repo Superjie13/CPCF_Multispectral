@@ -1,4 +1,4 @@
-## Channel-Patch Cross Feature Fusion for Multispectral Object Detection.
+## Rethinking Self-Attention for Multispectral Object Detection.
 
 >## <center> The code will be released after the paper is accepted.
 
