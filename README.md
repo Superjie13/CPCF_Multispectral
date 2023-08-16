@@ -1,6 +1,6 @@
 ## Rethinking Self-Attention for Multispectral Object Detection.
 
-## <center> The code will be released after the paper is accepted. </center>
+### <center> The code will be released after the paper is accepted. </center>
 
 -----------------------------------------------------------------------------------------------------------------
 
