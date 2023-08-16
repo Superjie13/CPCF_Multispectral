@@ -1,42 +1,42 @@
-## Channel-Patch Cross Feature Fusion for Multispectral Object Detection.
+## Rethinking Self-Attention for Multispectral Object Detection.
 
->## <center> The code will be released after the paper is accepted.
+## <center> The code will be released after the paper is accepted. </center>
 
 -----------------------------------------------------------------------------------------------------------------
 
 ### Description:
 Data from different modalities, such as infrared and visible light images, can offer complementary information, and integrating such information can significantly enhance the perceptual capabilities of a system to the surroundings. Thus, multi-modal object detection has widespread applications, particularly in challenging weather conditions like low-light scenarios. The core of multi-modal fusion lies in developing a reasonable fusion strategy, which can fully exploit the complementary features of different modalities while preventing a significant increase in model complexity. To this end, this chapter proposes a novel lightweight cross-fusion module named Channel-Patch Cross Fusion (CPCF), which leverages Channel-wise Cross-Attention (CCA) and Patch-wise Cross-Attention (PCA) to encourage mutual rectification among different modalities. This process simultaneously explores commonalities across modalities while maintaining the uniqueness of each modality. Furthermore, we design a versatile intermediate fusion framework that can leverage CPCF to enhance the performance of multi-modal object detection. The proposed method is extensively evaluated on multiple public multi-modal datasets, namely FLIR, LLVIP, and DroneVehicle. The experiments indicate that our method yields consistent performance gains across various benchmarks and can be extended to different types of detectors, further demonstrating its robustness and generalizability.
 
-> Unimodal detection results on FLIR dataset
+- Comparison of the **unimodal (left)** and **multimodal (right)** detection results on FLIR dataset. >**RGB**<
 <div align="center">
-<img src="resources/unimodal_FLIR.gif" width=90% alt="unimodal_FLIR_results"/>
+<img src="resources/compare_rgb_FLIR.gif" width=80% alt="compare_rgb_FILR"/>
 </div>
 
-> Multimodal detection results on FLIR dataset
+- Comparison of the **unimodal (left)** and **multimodal (right)** detection results on FLIR dataset. >**Thernal**<
 <div align="center">
-<img src="resources/multimodal_FLIR.gif" width=90% alt="multimodal_FLIR_results"/>
+<img src="resources/compare_thermal_FLIR.gif" width=80% alt="compare_thermal_FLIR"/>
 </div>
 
-> Unimodal detection results on DroneVehicle dataset
+- Comparison of the **unimodal (left)** and **multimodal (right)** detection results on DroneVehicle dataset. >**RGB**<
 <div align="center">
-<img src="resources/unimodal_DroneVehicle.gif" width=90% alt="unimodal_DroneVehicle_results"/>
+<img src="resources/compare_rgb_DroneVehicle.gif" width=80% alt="compare_rgb_DroneVehicle"/>
 </div>
 
-> Multimodal detection results on DroneVehicle dataset
+- Comparison of the **unimodal (left)** and **multimodal (right)** detection results on DroneVehicle dataset. >**Thermal**<
 <div align="center">
-<img src="resources/multimodal_DroneVehicle.gif" width=90% alt="multimodal_DroneVehicle_results"/>
+<img src="resources/compare_thermal_DroneVehicle.gif" width=80% alt="compare_thermal_DroneVehicle"/>
 </div>
 
-> Comparison of information entropy distributions of top and bottom 16 channels of RGB and Thermal feature maps at different levels. † denotes MLP-based cross-attention.
+- Comparison of information entropy distributions of top and bottom 16 channels of RGB and Thermal feature maps at different levels. † denotes MLP-based cross-attention.
 
 <div align='center'>
-<img src="resources/entropy_dist.png" width=90% alt="entropy_distribution"/>
+<img src="resources/entropy_dist.png" width=80% alt="entropy_distribution"/>
 </div>
 
-> Visualization of top k and bottom k channel features.The left side shows the RGB data stream at different stages, while the right side shows the counterpart of the thermal data stream. † denotes MLP-based cross-attention.
+- Visualization of top k and bottom k channel features.The left side shows the RGB data stream at different stages, while the right side shows the counterpart of the thermal data stream. † denotes MLP-based cross-attention.
 
 <div align='center'>
-<img src="resources/vis_channel_feat.png" width=90% alt="entropy_distribution"/>
+<img src="resources/vis_channel_feat.png" width=80% alt="entropy_distribution"/>
 </div>
 
 -----------------------------------------------------------------------------------------------------------------
