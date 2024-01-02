@@ -106,7 +106,21 @@ val_evaluator = dict(
       outfile_prefix='/home/sijie/Documents/mmdet-cpcf/multimodal-mmdet/work_dirs/kaist_yolox',   # <=== set the prefix of the results file
       )
 ```
+2. run the test.py to generate the json results file
+```bash
+python tools/test.py [config] [checkpoint]
+```
+3. convert the results file to the kaist format for evaluation (a new json file will be generated in the same folder as the results file)
+```bash
+python tools/dataset_converters/mmrst2kaistrst.py [results_file]
+```
+4. evaluate the performance
+```bash
+cd .../MLPD-Multi-Label-Pedestrian-Detection
+python evaluation_script/evaluation_script.py --rstFiles [new_results_file]
+```
 
+### Dataset Structure
 The final folder structure should look like this:
 
 ```
