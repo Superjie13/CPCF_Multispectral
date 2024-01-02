@@ -56,7 +56,7 @@ We recommend setting up a new virtual environment:
  ```bash
  pip install -U openmim
  mim install mmengine
- mim install "mmcv=2.0.1"
+ mim install "mmcv==2.0.1"
 ```
 
 Then, the required packages for this project can be installed by running:
