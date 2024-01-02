@@ -56,7 +56,7 @@ We recommend setting up a new virtual environment:
  ```bash
  pip install -U openmim
  mim install mmengine
- mim install "mmcv>=2.0.0"
+ mim install "mmcv=2.0.1"
 ```
 
 Then, the required packages for this project can be installed by running:
@@ -91,6 +91,22 @@ Images in DroneVehicle dataset are paded on four sides, so you should crop the i
 python tools/dataset_converters/DroneVehicle/crop_images.py
 ``` 
 
+__KAIST dataset__ can be obtained from official [website](https://soonminhwang.github.io/rgbt-ped-detection/) or directly download our converted dataset from [Google Drive]().
+
+__Note:__ To evaluate the performance of the model on the KAIST dataset, you should clone the [MLPD-Multi-Label-Pedestrian-Detection](https://github.com/sejong-rcv/MLPD-Multi-Label-Pedestrian-Detection). This repo is used to evaluate the performance of the model on the KAIST dataset.
+
+To do so:
+1. config the val_evaluator in the config file as follows:
+```python
+val_evaluator = dict(
+      type='CocoMetric',
+      ann_file=data_root + 'annotations/KAIST_test_visible.json',
+      metric='bbox',
+      format_only=False,   # <=== set this to False to generate the results file
+      outfile_prefix='/home/sijie/Documents/mmdet-cpcf/multimodal-mmdet/work_dirs/kaist_yolox',   # <=== set the prefix of the results file
+      )
+```
+
 The final folder structure should look like this:
 
 ```
@@ -111,6 +127,11 @@ repo
 │   │   ├── train
 │   │   ├── val
 │   │   ├── test
+│   │   ├── ...
+│   ├── kaist
+│   │   ├── annotations
+│   │   ├── infrared
+│   │   ├── visible
 │   │   ├── ...
 │   ├── ...
 ├── ...
